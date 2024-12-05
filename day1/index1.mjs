@@ -1,3 +1,4 @@
+import { count } from 'console';
 import { readFileSync } from 'fs';
 
 const filePath = './day1/index.txt';
@@ -32,8 +33,8 @@ function readColumnsFromFile(filePath) {
 
 const { column1, column2 } = readColumnsFromFile(filePath);
 
-const firstColumn = column1;
-const secondColumn = column2;
+export const firstColumn = column1;
+export const secondColumn = column2;
 
 
 function difference(column1, column2) {
@@ -46,3 +47,5 @@ for (let i = 0; i < sortedFirst.length; i++) {
 return diff.reduce((a, b) => a + b);
 }
 console.log(difference(firstColumn, secondColumn))
+
+
